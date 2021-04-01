@@ -212,9 +212,9 @@ basic structure of an ideal research paper
 course of the CSE department of Daffodil 
 International University. Authors email 
 address…. E-mail:
-ashraful15-12271@diu.edu.bd,
-rana15-12511@diu.edu.bd ,
-nahid15-12408@diu.edu.bd
+- ashraful15-12271@diu.edu.bd
+- rana15-12511@diu.edu.bd
+- nahid15-12408@diu.edu.bd
 
 # Conclusion:
 Our team believes that simple Python 
