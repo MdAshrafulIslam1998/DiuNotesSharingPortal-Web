@@ -54,6 +54,10 @@ admin panel will support and judge all the
 file types to maintain the quality of the 
 site.
 
+# Site link
+The link of our web application is --
+https://diunotessharingportal.pythonanywhere.com/
+
 # Objectives and problem 
 discussion:
 The motivation for this project came from 
@@ -189,8 +193,57 @@ can upload any notes on any
 courses of any topics by creating 
 a simple account on the website.
 
-# Site link
-The link of our web application is --
-https://diunotessharingportal.pythonanywhere.com/
+# Discussion
+This web application is designed for the 
+general user. the UI design is very simple 
+to use. Preview and download buttons 
+are also provided. the main key feature of 
+this web application is the search unit. 
+any student can search naming their 
+courses, topics, faculty, course code and
+many other tags. the file type is also 
+described which makes this web 
+application more comfortable to use.
+
+# Acknowledgement
+This Project report maintained the proper 
+basic structure of an ideal research paper 
+(project). It’s approved by the OOP-II 
+course of the CSE department of Daffodil 
+International University. Authors email 
+address…. E-mail:
+ashraful15-12271@diu.edu.bd,
+rana15-12511@diu.edu.bd ,
+nahid15-12408@diu.edu.bd
+
+# Conclusion:
+Our team believes that simple Python 
+made web application can change the 
+future of the education system for 
+Daffodil International University.
+
+# References:
+1. StuDocu
+https://www.studocu.com
+2. Noteshub
+https://noteshub.co.in/
+3. Studydrive
+https://www.studydrive.net/
+4. GoogleDrive
+https://www.google.com/docs/about/
+
+# Copyright
+- copyright & developed by @ Md. Ashraful Islam
+- github - https://github.com/MdAshrafulIslam1998
 
 # Showcase
+![image](https://user-images.githubusercontent.com/81482212/113277881-056ac380-9303-11eb-8fc0-9ac870375fed.png)
+![image](https://user-images.githubusercontent.com/81482212/113277907-0ef42b80-9303-11eb-9cd9-0b12a16edea0.png)
+![image](https://user-images.githubusercontent.com/81482212/113277925-1582a300-9303-11eb-8f8f-4d4b88c16c53.png)
+![image](https://user-images.githubusercontent.com/81482212/113277952-1ca9b100-9303-11eb-838d-dcea1b9c5647.png)
+![image](https://user-images.githubusercontent.com/81482212/113277963-23382880-9303-11eb-8b2e-aaf2a83b519e.png)
+![image](https://user-images.githubusercontent.com/81482212/113277981-28957300-9303-11eb-94f5-0bf9d56bf96e.png)
+![image](https://user-images.githubusercontent.com/81482212/113277999-2cc19080-9303-11eb-8287-2a9f639a4451.png)
+![image](https://user-images.githubusercontent.com/81482212/113278019-33e89e80-9303-11eb-85d6-ad1cfd62fd4f.png)
+![image](https://user-images.githubusercontent.com/81482212/113278034-3945e900-9303-11eb-996a-2233355d1b76.png)
+
