@@ -1,0 +1,137 @@
+{% extends 'usernavigation.html' %}
+{% load static %}
+{% block body %}
+
+
+
+<div class="container mt-5" style="padding-right: 100px; padding-left: 100px; ">
+    <h2 class="text-center">Edit Profile</h2>
+    <hr>
+    <br>
+
+    <div >
+
+        <div class="col-sm-12">
+
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <label>FirstName</label>
+                        <input type="text" class="form-control" value="{{data.user.first_name}}" name="firstname">
+
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label>LastName</label>
+                        <input type="text" class="form-control" value="{{data.user.last_name}}" name="lastname">
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label>Email Address</label>
+                        <input type="text" class="form-control" value="{{data.user.username}}" name="emailid" readonly>
+
+                    </div>
+
+                </div>
+
+                 <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label>Contact</label>
+                        <input type="text" class="form-control" value="{{data.contact}}" name="contact">
+
+                    </div>
+
+                </div>
+                 <div class="form-row">
+                    <div class="form-group col-md-6 mt-3">
+                        <label>Campus</label>
+                        <select class="form-control" name="campus">
+                            <option value="">---Select Campus---</option>
+                            <option value="City Campus">City Campus</option>
+                            <option value="Permanent Campus">Permanent Campus</option>
+                            <option value="Uttara Campus">Uttara Campus</option>
+                        </select>
+
+                    </div>
+
+
+
+                     <div class="form-group col-md-6 mt-5">
+
+
+                       <input type="text" value="{{data.campus}}" class="form-control" readonly>
+                     </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6 mt-3">
+                        <label>Role</label>
+                        <select class="form-control" name="role">
+                            <option value="">---Select Role---</option>
+                                <option value="Student">Student</option>
+                                <option value="Teacher">Teacher</option>
+                        </select>
+
+                    </div>
+
+
+
+                     <div class="form-group col-md-6 mt-5">
+
+
+                       <input type="text" value="{{data.role}}" class="form-control" readonly>
+                     </div>
+
+                </div>
+
+
+
+                 <div class="form-row">
+                    <div class="form-group col-md-6 mt-3">
+                        <label>Department</label>
+                        <select class="form-control" name="branch">
+
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Mechanical">Mechanical</option>
+                            <option value="Civil">Civil</option>
+                            <option value="Eelctrical">ELECTRICAL</option>
+                            <option value="Electronics">Electronics</option>
+                        </select>
+
+                    </div>
+
+
+
+                     <div class="form-group col-md-6 mt-5">
+
+
+                       <input type="text" value="{{data.branch}}" class="form-control" readonly>
+                     </div>
+
+                </div>
+                 <input type="submit" value="Update" class="btn  mt-3" style="background-color:#fdd">
+            </form>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+{% if error %}
+<script>
+    alert('Profile Updated Successfully');
+    window.location= "{% url 'profile' %}";
+</script>
+
+{% endif %}
+
+{% endblock %}

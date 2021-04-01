@@ -1,0 +1,17 @@
+.transparentbox{
+weight : 100%;
+height:100%;
+background-color:lightgrey;
+border:1px solid #CD853F;
+opacity : 0.6;
+}
+
+.transparentbox p{
+margin-top : 20%;
+font-weight:bold;
+font-size:60px;
+font-family:'Monotype Corsiva';
+color:DarkRed;
+text-align:center;
+
+}

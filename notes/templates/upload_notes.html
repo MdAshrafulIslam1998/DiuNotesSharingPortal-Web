@@ -1,0 +1,93 @@
+{% extends 'usernavigation.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container mt-5 mb-5 " style="padding-right: 100px; padding-left: 100px;">
+   <div >
+
+        <div >
+
+            <h2 class="text-center">Upload Notes</h2>
+           <HR>
+
+           <form method="post" enctype="multipart/form-data">
+               {% csrf_token %}
+               <label>Department</label>
+               <select class="form-control" name="branch">
+                   <option value="">---Select Branch---</option>
+                   <option value="Computer Science">Computer Science</option>
+                   <option value="Mechanical">Mechanical</option>
+                   <option value="Civil">Civil</option>
+                   <option value="Electronics">Electronics</option>
+                   <option value="Electrical">Electrical</option>
+               </select>
+
+                <label>Are You?</label>
+                <select class="form-control" name="role1">
+                  <option value="Student">Student</option>
+                  <option value="Teacher">Teacher</option>
+                </select>
+
+                <label>Campus</label>
+                <select class="form-control" name="campus1">
+                    <option value="">---Select Campus---</option>
+                  <option value="City Campus">City Campus</option>
+                  <option value="Permanent Campus">Permanent Campus</option>
+                    <option value="Uttara Campus">Uttara Campus</option>
+                </select>
+
+               <label>Course</label>
+               <select class="form-control" name="subject">
+                   <option value="">---Select Course Name---</option>
+                  <option value="CSE132 - Electrical Circuits">CSE132 - Electrical Circuits</option>
+                  <option value="GED131 - Art of Living">GED131 - Art of Living</option>
+                    <option value="CSE136 - Software Project I">CSE136 - Software Project I</option>
+                </select>
+
+               <label>Topic</label>
+                <textarea class="form-control" name="topic">
+
+                </textarea>
+
+                <label>Notes File</label>
+               <input type="file" class="form-control" name="notesfile">
+                <label>File Type</label>
+                <select class="form-control" name="filetype">
+                   <option value="">---Select File Type---</option>
+                   <option value="PDF">PDF</option>
+                   <option value="PPT">PPT</option>
+                   <option value="DOC/DOCX">DOC/DOCX</option>
+                   <option value="TXT">TXT</option>
+                   <option value="IMG">Image</option>
+                    <option value="ZIP/RAR">ZIP/RAR</option>
+               </select>
+
+
+                <label>Description</label>
+                <textarea class="form-control" name="description">
+
+                </textarea>
+
+               <input type="submit" class="btn  mt-2" value="Submit" style="background-color:#fdd">
+           </form>
+
+       </div>
+
+   </div>
+
+</div>
+
+{% ifequal error "no" %}
+<script>
+    alert('Notes uploaded Successfully');
+    window.location=('{% url 'view_mynotes' %}');
+</script>
+{% endifequal %}
+
+{% ifequal error "yes" %}
+<script>
+    alert('Something went wrong , Tryagain');
+</script>
+{% endifequal %}
+
+{% endblock %}

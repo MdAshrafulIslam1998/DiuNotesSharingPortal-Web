@@ -1,0 +1,72 @@
+{% extends 'navigation.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container mt-5">
+   <div class="row">
+       <div class="col-sm-6" style="padding-right: 100px;">
+           <h2 class="text-center">Don't Have An Account? </h2>
+           <HR>
+
+          <center> <a href="{% url 'login' %}" class="btn   mt-5" style="background-color:#B2ECCB">Creat An Account</a></center>
+       </div>
+        <div class="col-sm-6">
+
+            <h2 class="text-center">Register</h2>
+           <HR>
+
+           <form method="post">
+               {% csrf_token %}
+               <label>FirstName</label>
+               <input type="text" class="form-control" placeholder="Enter Your FirstName" name="firstname">
+               <label>LastName</label>
+               <input type="text" class="form-control" placeholder="Enter Your LastName" name="lastname">
+                <label>Contact</label>
+               <input type="text" class="form-control" placeholder="Enter Contact Number" name="contact">
+                <label>Email </label>
+               <input type="text" class="form-control" placeholder="Enter Email Address" name="emailid">
+                <label>Password</label>
+               <input type="password" class="form-control" placeholder="Enter Password" name="password">
+                <label>Department</label>
+              <select class="form-control" name="branch">
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Mechanical">Mechanical</option>
+                  <option value="Civil">Civil</option>
+                  <option value="Eelctrical">ELECTRICAL</option>
+                  <option value="Electronics">Electronics</option>
+
+              </select>
+               <label>Campus</label>
+              <select class="form-control" name="campus">
+                  <option value="City Campus">City Campus</option>
+                  <option value="Permanent Campus">Permanent Campus</option>
+                  <option value="Uttara Campus">Uttara Campus</option>
+
+
+              </select>
+                <label>Are You?</label>
+                <select class="form-control" name="role">
+                  <option value="Student">Student</option>
+                  <option value="Teacher">Teacher</option>
+                </select>
+
+               <input type="submit" class="btn  mt-2" value="Submit" style="background-color:#B2ECCB">
+           </form>
+       </div>
+   </div>
+</div>
+
+{% ifequal error "no" %}
+<script>
+    alert('Signup Successful');
+    window.location=('{% url 'login' %}');
+</script>
+{% endifequal %}
+
+{% ifequal error "yes" %}
+<script>
+    alert('Something went wrong , Tryagain');
+</script>
+{% endifequal %}
+
+{% endblock %}
